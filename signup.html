@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Sign Up</title>
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="University Logo" class="logo">
+            <h1>Student Registration</h1>
+        </div>
+        
+        <form id="signupForm" class="auth-form multi-step">
+            <!-- Step 1 -->
+            <div class="form-step active" data-step="1">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <button type="button" class="btn-secondary next-step">Next</button>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="form-step" data-step="2">
+                <h2>Institution Type</h2>
+                <div class="form-group radio-group">
+                    <label>
+                        <input type="radio" name="institutionType" value="autonomous" required>
+                        Autonomous College
+                    </label>
+                    <label>
+                        <input type="radio" name="institutionType" value="university">
+                        University
+                    </label>
+                </div>
+                
+                <button type="button" class="btn-secondary prev-step">Back</button>
+                <button type="button" class="btn-secondary next-step">Next</button>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="form-step" data-step="3">
+                <h2>Academic Details</h2>
+                <div class="form-group">
+                    <label for="registerNo">Registration Number</label>
+                    <input type="text" id="registerNo" name="registerNo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="cse">Computer Science</option>
+                        <option value="ece">Electronics</option>
+                        <option value="mech">Mechanical</option>
+                        <option value="civil">Civil</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="semester">Current Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="advisorName">Class Advisor Name</label>
+                    <input type="text" id="advisorName" name="advisorName" required>
+                </div>
+                
+                <button type="button" class="btn-secondary prev-step">Back</button>
+                <button type="button" class="btn-secondary next-step">Next</button>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="form-step" data-step="4">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+                
+                <button type="button" class="btn-secondary prev-step">Back</button>
+                <button type="submit" class="btn-primary">Create Account</button>
+            </div>
+        </form>
+        
+        <div class="auth-footer">
+            <p>Already have an account? <a href="index.html">Login</a></p>
+        </div>
+    </div>
+    
+    <script src="scripts/auth.js"></script>
+</body>
+</html>

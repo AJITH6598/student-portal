@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Schedule | Student Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar (same as dashboard.html) -->
+        <!-- ... -->
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Exam Schedule</h1>
+                <div class="header-actions">
+                    <div class="exam-filter">
+                        <select id="examTypeFilter">
+                            <option value="all">All Exams</option>
+                            <option value="upcoming">Upcoming Exams</option>
+                            <option value="completed">Completed Exams</option>
+                        </select>
+                    </div>
+                    <button class="btn-outline" id="downloadSchedule">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            </header>
+            
+            <div class="content-section">
+                <div class="exam-schedule">
+                    <!-- Exam Card 1 -->
+                    <div class="exam-card upcoming">
+                        <div class="exam-date">
+                            <div class="date-box">
+                                <span class="day">15</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="exam-details">
+                            <h3>Data Structures and Algorithms</h3>
+                            <p class="exam-meta">
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</span>
+                                <span><i class="fas fa-building"></i> Block A</span>
+                                <span><i class="fas fa-door-open"></i> Room A201</span>
+                                <span><i class="fas fa-chair"></i> Seat 25</span>
+                            </p>
+                            <div class="exam-instructions">
+                                <h4>Instructions:</h4>
+                                <ul>
+                                    <li>Bring your university ID card</li>
+                                    <li>No programmable calculators allowed</li>
+                                    <li>Reporting time: 8:30 AM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exam-actions">
+                            <button class="btn-icon" title="Add to Calendar">
+                                <i class="fas fa-calendar-plus"></i>
+                            </button>
+                            <button class="btn-icon" title="View Campus Map">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </button>
+                            <button class="btn-primary">
+                                Study Materials <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Exam Card 2 -->
+                    <div class="exam-card upcoming">
+                        <div class="exam-date">
+                            <div class="date-box">
+                                <span class="day">18</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="exam-details">
+                            <h3>Database Management Systems</h3>
+                            <p class="exam-meta">
+                                <span><i class="fas fa-clock"></i> 2:00 PM - 5:00 PM</span>
+                                <span><i class="fas fa-building"></i> Block B</span>
+                                <span><i class="fas fa-door-open"></i> Room B105</span>
+                                <span><i class="fas fa-chair"></i> Seat 12</span>
+                            </p>
+                            <div class="exam-instructions">
+                                <h4>Instructions:</h4>
+                                <ul>
+                                    <li>Bring your university ID card</li>
+                                    <li>SQL reference sheet will be provided</li>
+                                    <li>Reporting time: 1:30 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exam-actions">
+                            <button class="btn-icon" title="Add to Calendar">
+                                <i class="fas fa-calendar-plus"></i>
+                            </button>
+                            <button class="btn-icon" title="View Campus Map">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </button>
+                            <button class="btn-primary">
+                                Study Materials <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Completed Exam Card -->
+                    <div class="exam-card completed">
+                        <div class="exam-date">
+                            <div class="date-box">
+                                <span class="day">05</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="exam-details">
+                            <h3>Operating Systems</h3>
+                            <p class="exam-meta">
+                                <span><i class="fas fa-check-circle"></i> Completed</span>
+                                <span><i class="fas fa-percentage"></i> Score: 87/100</span>
+                            </p>
+                            <div class="exam-results">
+                                <button class="btn-outline">
+                                    <i class="fas fa-chart-bar"></i> View Detailed Results
+                                </button>
+                                <button class="btn-outline">
+                                    <i class="fas fa-file-alt"></i> View Answer Sheet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-prep-section">
+                    <h2>Exam Preparation Resources</h2>
+                    <div class="prep-resources">
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>Previous Year Papers</h3>
+                            <p>Access question papers from last 5 years</p>
+                            <button class="btn-outline">Browse Papers</button>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Revision Videos</h3>
+                            <p>Recorded lectures for quick revision</p>
+                            <button class="btn-outline">Watch Videos</button>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3>Practice Quizzes</h3>
+                            <p>Test your knowledge with MCQ quizzes</p>
+                            <button class="btn-outline">Take Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/exam.js"></script>
+</body>
+</html>

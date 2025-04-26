@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable | Student Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar (same as dashboard.html) -->
+        <!-- ... -->
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Class Timetable</h1>
+                <div class="header-actions">
+                    <div class="week-navigation">
+                        <button class="btn-icon" id="prevWeek">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <span id="currentWeek">Week of Oct 23, 2023</span>
+                        <button class="btn-icon" id="nextWeek">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <button class="btn-outline" id="printTimetable">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                </div>
+            </header>
+            
+            <div class="content-section">
+                <div class="timetable-container">
+                    <div class="timetable-view">
+                        <div class="timetable-header">
+                            <div class="time-column"></div>
+                            <div class="day-header">Monday</div>
+                            <div class="day-header">Tuesday</div>
+                            <div class="day-header">Wednesday</div>
+                            <div class="day-header">Thursday</div>
+                            <div class="day-header">Friday</div>
+                            <div class="day-header">Saturday</div>
+                        </div>
+                        
+                        <div class="timetable-body">
+                            <!-- Time slots from 8 AM to 6 PM -->
+                            <div class="time-slot">
+                                <div class="time-label">8:00 AM</div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                            </div>
+                            
+                            <!-- 9:00 AM slot with classes -->
+                            <div class="time-slot">
+                                <div class="time-label">9:00 AM</div>
+                                <div class="day-cell">
+                                    <div class="class-event" data-subject="CS501">
+                                        <div class="event-header">
+                                            <span class="event-subject">CS501</span>
+                                            <span class="event-time">9:00-10:00</span>
+                                        </div>
+                                        <div class="event-body">
+                                            <p>Data Structures</p>
+                                            <p class="event-location">Room A12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell">
+                                    <div class="class-event" data-subject="CS501">
+                                        <div class="event-header">
+                                            <span class="event-subject">CS501</span>
+                                            <span class="event-time">9:00-10:00</span>
+                                        </div>
+                                        <div class="event-body">
+                                            <p>Data Structures</p>
+                                            <p class="event-location">Room A12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell">
+                                    <div class="class-event" data-subject="CS501">
+                                        <div class="event-header">
+                                            <span class="event-subject">CS501</span>
+                                            <span class="event-time">9:00-10:00</span>
+                                        </div>
+                                        <div class="event-body">
+                                            <p>Data Structures</p>
+                                            <p class="event-location">Room A12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-cell"></div>
+                            </div>
+                            
+                            <!-- More time slots... -->
+                            
+                            <!-- 11:00 AM slot with classes -->
+                            <div class="time-slot">
+                                <div class="time-label">11:00 AM</div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell">
+                                    <div class="class-event lab" data-subject="CS502">
+                                        <div class="event-header">
+                                            <span class="event-subject">CS502</span>
+                                            <span class="event-time">11:00-12:30</span>
+                                        </div>
+                                        <div class="event-body">
+                                            <p>DBMS Lab</p>
+                                            <p class="event-location">Lab B05</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell">
+                                    <div class="class-event lab" data-subject="CS502">
+                                        <div class="event-header">
+                                            <span class="event-subject">CS502</span>
+                                            <span class="event-time">11:00-12:30</span>
+                                        </div>
+                                        <div class="event-body">
+                                            <p>DBMS Lab</p>
+                                            <p class="event-location">Lab B05</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="day-cell"></div>
+                                <div class="day-cell"></div>
+                            </div>
+                            
+                            <!-- More time slots... -->
+                        </div>
+                    </div>
+                    
+                    <div class="timetable-legend">
+                        <div class="legend-item">
+                            <span class="legend-color lecture"></span>
+                            <span>Lecture</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color lab"></span>
+                            <span>Lab Session</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color tutorial"></span>
+                            <span>Tutorial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timetable-actions">
+                    <button class="btn-outline">
+                        <i class="fas fa-calendar-plus"></i> Add Personal Event
+                    </button>
+                    <button class="btn-primary">
+                        <i class="fas fa-sync-alt"></i> Sync with Calendar
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="scripts/main.js"></script>
+    <script src="scripts/timetable.js"></script>
+</body>
+</html>
